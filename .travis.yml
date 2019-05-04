@@ -1,0 +1,21 @@
+sudo: required
+language: python
+python:
+- '3.4'
+cache: pip
+branches:
+  only:
+  - /v?\d+\.\d+\.\d+([a-z0-9-]+)?/
+script:
+  - echo "no unit test"
+before_deploy:
+  - python setup.py sdist
+deploy:
+  provider: pypi
+  user: eterna2
+  password:
+    secure: mLjL/KI+kOtFeHEzd322nLp6lrUcxA+ugaQirMw6hgmvU9k9e88et58z0hMX8xR3fzDzyPKzh5KHxzjtEaYKL/YJYvNM+Dnq/zytKTk14RBGrfYYgCeYtb4et42lihV3K32TAWGI2s3Tokyx8qmuJktzsPL/tCdFjBbzc2Dc3dYfv1UHcAfzlgAUmFWHiR51zWkSjcMLMRxtYTB2bmVjFMe0G+YhN78+hdx2FFUd6ig5ayR7mnaYDAXqsAQCU8hfjwYCjlz6LZQD/4a8eU+LnyuJ6+w7HZT8AvMDtcudtWXein6HHKn1JcRsWimVHk7iVn/3cdUVG2yfH1/a5l12K8RTeu2kSrhPqfrbS9D4hPmX/TE9aPEI8flEJP5XFUArfufNTYH6VgVKxVwgugsF1gX4Ok8nGi9wTRZ8J5Ygs9MhIfLuOWF3fBu6TmBdEkEQIfQtsDw0gGhRiKC1V0ZsZ1sS+CTb+0zNd/Hja9hei087vt8yUZ2BXJ9D2OawHVmEevq3EhCyeVUEQoUbTaSQe0xiWPr+L4gdbSNiEDxiQSseSaoxAUzYBP6pyA5EL+RFxsNH2VgEZhkQZkbIMA+5AIzD4Y9g1hehM3gjznkp12vwL3+Wg7jLUt7ggIARQy7A/zITgQ3aqH+/39gn66nj2EvLf8saQIwNEwR7Iz/TNcU=
+  on:
+    tags: true
+    branch: master
+    distributions: sdist
