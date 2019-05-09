@@ -6,6 +6,9 @@ from setuptools import find_packages, setup
 with open('version.txt', 'r') as filein:
     version = filein.read().strip()
 
+with open('README.md', 'r') as filein:
+    readme = filein.read().strip()
+
 setup_requirements = []
 test_requirements = []
 
@@ -14,7 +17,7 @@ setup(
     author="william teo",
     author_email='eterna2@hotmail.com',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'Programming Language :: Python :: 2.7',
@@ -25,6 +28,8 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     description="Generated openapi models for Argo objects.",
+    long_description=readme,
+    long_description_content_type='text/markdown',    
     url="https://github.com/e2fyi/argo-models",
     download_url="https://github.com/e2fyi/argo-models/archive/v%s.tar.gz" % version,
     include_package_data=True,
