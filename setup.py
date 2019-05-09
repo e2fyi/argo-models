@@ -17,7 +17,7 @@ setup(
     author="william teo",
     author_email='eterna2@hotmail.com',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'Programming Language :: Python :: 2.7',
