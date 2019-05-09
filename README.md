@@ -37,6 +37,8 @@ artifact_location = V1alpha1ArtifactLocation(s3=s3_artifact)
 To generate the latest models, update `version.txt` with the desired argo release 
 (e.g. `2.3.0-rc3`) and then run `./generate-api.sh`.
 
+To release new version to pypi, create a release with the corresponding version tag (e.g. `v2.2.1`). Travis will automatically publish the package.
+
 > NOTE
 > `version.txt` should hold the current/latest argo version to be generated, as it 
 > is also used by `setup.py` as the `argo-models` package version.
