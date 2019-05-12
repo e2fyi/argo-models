@@ -3,13 +3,15 @@ set -e
 
 ARGO_VERSION=$(cat version.txt)
 
+# remove tmp files
+if [[ -f tmp ]]; then
+  echo "empty tmp/ folder"
+  rm -r tmp
+fi
+
 # create required folders
 mkdir -p tmp
 mkdir -p argo/models
-
-# remove tmp files
-echo "empty tmp/ folder"
-rm -r tmp/*
 
 # download swagger
 ./download-swagger.sh
@@ -21,7 +23,7 @@ sed s/io.argoproj.workflow.//g openapi-spec/argo-$ARGO_VERSION.json > tmp/swagge
 # generate python openapi models
 echo "starting openapi generator (docker)"
 docker run --rm -ti \
-  -v $PWD/tmp/swagger.json:/tmp/swagger.json:ro \
+  -v $PWD/tmp/swagger.json:/tmp/swagger.json \
   -v $PWD/tmp/argo:/tmp/argo:rw \
   openapitools/openapi-generator-cli \
     generate \

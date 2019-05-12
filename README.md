@@ -5,6 +5,9 @@
 `argo-models` is a `argo` namespaced package with the `argo.models` subpackage
 which contains the generated OpenAPI models from [Argo](https://github.com/argoproj/argo).
 
+> ## NOTE
+> Due to human error in the setup.py, argo `2.2.1` will be released as `2.2.1a`
+
 ```bash
 pip install argo-models
 ```
