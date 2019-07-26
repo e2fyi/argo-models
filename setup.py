@@ -37,7 +37,7 @@ setup(
     keywords='argo openapi swagger kubeflow',
     packages=['argo', 'argo.models'],
     setup_requires=setup_requirements,
-    python_requires='>=2.7, >=3.4',
+    python_requires='>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*',
     install_requires=['kubernetes'],
     test_suite='tests',
     tests_require=test_requirements,
