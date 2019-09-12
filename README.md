@@ -45,3 +45,7 @@ To release new version to pypi, create a release with the corresponding version 
 > NOTE
 > `version.txt` should hold the current/latest argo version to be generated, as it 
 > is also used by `setup.py` as the `argo-models` package version.
+
+
+## License
+This package is licensed under [Apache-2.0](./LICENSE) and is a derivative of the [Argo project](https://github.com/argoproj/argo) using [OpenAPI generator](https://github.com/OpenAPITools/openapi-generator).
