@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
 
-ARGO_VERSION=$(cat version.txt)
+if [ "$#" -gt 0 ]; then
+  ARGO_VERSION=$1
+else
+  ARGO_VERSION=$(cat version.txt)
+fi
 
 echo "Downloading openapi spec for Argo($ARGO_VERSION)."
 
