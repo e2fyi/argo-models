@@ -1,0 +1,28 @@
+{
+  "name": "@e2fyi/argo-models",
+  "version": "2.3.0",
+  "description": "typescript module for argo models. See https://github.com/argoproj/argo",
+  "main": "argo/model/models.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2fyi/argo-models.git"
+  },
+  "keywords": [
+    "argo",
+    "openapi",
+    "swagger",
+    "models",
+    "typescript",
+    "kubernetes",
+    "k8s"
+  ],
+  "author": "eterna2@hotmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/e2fyi/argo-models/issues"
+  },
+  "homepage": "https://github.com/e2fyi/argo-models#readme"
+}
