@@ -1,12 +1,10 @@
 # argo-models
+
 [![Build Status](https://travis-ci.org/e2fyi/argo-models.svg?branch=master)](https://travis-ci.org/e2fyi/argo-models)
 [![PyPI version](https://badge.fury.io/py/argo-models.svg)](https://badge.fury.io/py/argo-models)
 
 `argo-models` is a `argo` namespaced package with the `argo.models` subpackage
 which contains the generated OpenAPI models from [Argo](https://github.com/argoproj/argo).
-
-> ## NOTE
-> Due to human error in the setup.py, argo `2.2.1` will be released as `2.2.1a`
 
 ```bash
 pip install argo-models
@@ -37,15 +35,19 @@ artifact_location = V1alpha1ArtifactLocation(s3=s3_artifact)
 
 ## Developer notes
 
-To generate the latest models, update `version.txt` with the desired argo release 
+To generate the latest models, update `version.txt` with the desired argo release
 (e.g. `2.3.0-rc3`) and then run `./generate-api.sh`.
 
 To release new version to pypi, create a release with the corresponding version tag (e.g. `v2.2.1`). Travis will automatically publish the package.
 
-> NOTE
-> `version.txt` should hold the current/latest argo version to be generated, as it 
+> NOTE:
+>
+> `version.txt` should hold the current/latest argo version to be generated, as it
 > is also used by `setup.py` as the `argo-models` package version.
-
+>
+> Please install [@openapitools/openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli) to
+> generate the openapi specs.
 
 ## License
+
 This package is licensed under [Apache-2.0](./LICENSE) and is a derivative of the [Argo project](https://github.com/argoproj/argo) using [OpenAPI generator](https://github.com/OpenAPITools/openapi-generator).
