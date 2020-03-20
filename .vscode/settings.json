@@ -1,4 +1,4 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": ".venv/bin/python3.7"
+    "python.pythonPath": "/home/eterna2/.pyenv/versions/3.6.8/bin/python"
 }

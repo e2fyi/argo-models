@@ -1,0 +1,1 @@
+sphinx-build rst docs -b dirhtml -E -P

@@ -1,0 +1,5 @@
+sphinx-autoapi==1.*
+sphinx-rtd-theme==0.4.*
+sphinx==2.*
+m2r==0.2.*
+mistune==0.8.*

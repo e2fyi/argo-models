@@ -115,3 +115,6 @@ examples/tmp.py
 
 # tmp
 tmp/
+
+.vscode
+docs/
