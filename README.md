@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/e2fyi/argo-models.svg?branch=master)](https://travis-ci.org/e2fyi/argo-models)
 [![PyPI version](https://badge.fury.io/py/argo-models.svg)](https://badge.fury.io/py/argo-models)
+[![Downloads](https://pepy.tech/badge/argo-models/month)](https://pepy.tech/project/argo-models/month)
 
 `argo-models` is a `argo` namespaced package with the `argo.models` subpackage
 which contains the generated OpenAPI models from [Argo](https://github.com/argoproj/argo).
